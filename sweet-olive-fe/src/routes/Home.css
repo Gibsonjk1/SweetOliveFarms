@@ -1,0 +1,43 @@
+.home-main{
+    width: 80%;
+    height: auto;
+    text-align: center;
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+
+.home-inner{
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid;
+    width: 30%;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    float:left;
+}
+
+.plants{
+ background-image: url("../img/lavender-fields-harvesting-4.jpeg"); 
+ background-size: cover;  
+}
+
+.recipes{
+    background-image: url('../img/Thai-Coconut-Curry-3-1024x896.jpeg');
+    background-size: cover; 
+}
+
+.projects{
+    background-image: url('../img/rugged\ woods\ soap.jpeg');
+    background-size: cover; 
+}
+
+div.home-post{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

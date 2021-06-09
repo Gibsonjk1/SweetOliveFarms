@@ -1,0 +1,29 @@
+.visible-false{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: gray;
+    transform: translate3d(100vw, 0, 0);
+    transition: transform 1s;
+         
+    width: 30vw;
+    height: auto;
+}   
+
+.visible-true{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: gray;
+    transform: translate3d(70vw, 0, 0);
+    transition: transform 1s;
+
+         
+    width: 30vw;
+    height: auto;  
+}
+
+.menu-left{
+    position: fixed;
+    left: 5px;
+}

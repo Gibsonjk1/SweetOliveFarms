@@ -1,0 +1,43 @@
+.plants-main{
+    width: 80%;
+    height: auto;
+    text-align: center;
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plants-inner{
+    flex-direction: row;
+    
+    justify-content: space-around;
+    border: 1px solid;
+    width: 48%;
+    height: 300px;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.annuals{
+ background-image: url("../img/lavender-fields-harvesting-4.jpeg"); 
+ background-size: cover;  
+}
+
+.perennials{
+    background-image: url('../img/Lavender\ plants.jpeg');
+    background-size: cover; 
+}
+
+.fruits{
+    background-image: url('../img/rugged\ woods\ soap.jpeg');
+    background-size: cover; 
+}
+
+.veggies{
+    background-image: url('../img/Lavender\ unplanted.jpeg');
+    background-size: cover; 
+}
