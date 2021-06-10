@@ -35,13 +35,13 @@ class SweetOliveApi {
 
   static async analyzeComment(comment) {
     console.log('analyze comment')
-    await axios.post(`${BASE_URL}/commentanalyzer`, {comment})
+    let score = await axios.post(`${BASE_URL}/commentanalyzer`, {comment})
     .then(function(res){
         let score = res.data.score
         console.log('Score from api: ', score)
         return score;
-
     })
+    return score
   };
 
 }
