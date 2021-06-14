@@ -22,26 +22,35 @@ class Post {
 
     static async getNewestPost(){
         console.log('got to newest post')
-        try{
-            console.log('got into the try')
+        let data=null;
+       
             client.get('post', (err, reply) => {
                 if (err) throw err;
-                if (reply) return reply
+                if (reply) {
+                    data = reply 
+                    return reply}
             });
-
-            console.log("continuing")
+            console.log('data: ', data)
+            if (!data){
+        try{
+            console.log('got into the try')
+            
             let res = await axios.get('http://sweetolivefarms.com/wp-json/wp/v2/posts?per_page=1')
-            client.set("post", JSON.stringify(res))
+            client.set("post", JSON.stringify(res.data), 'EX', 60*60*24)
             client.get('post', (err, reply) => {
+                data=reply
                 return reply
             });
-                
+        
+            return data;  
             
         
         }catch(err){
             console.log('catch has caught me')
             return console.log(err)
         }
+            }
+            return data;
     }
 
 

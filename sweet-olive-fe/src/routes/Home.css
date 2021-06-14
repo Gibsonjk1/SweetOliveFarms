@@ -2,37 +2,59 @@
     width: 80%;
     height: auto;
     text-align: center;
-    border: 1px solid;
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
+
 
 
 .home-inner{
-    flex-direction: row;
-    justify-content: space-around;
-    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: 258px;
+    min-height: 175px;
     width: 30%;
-    height: 300px;
+    height: auto;
     margin-right: auto;
     margin-left: auto;
-    float:left;
+   
 }
+
+.home-inner a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 2em;
+    /* font-weight: bold; */
+}
+
+/* .home-inner .wrapper{
+    background-color: black;
+    height: auto;
+    width: 100%;
+    opacity: .9;
+} */
 
 .plants{
  background-image: url("../img/lavender-fields-harvesting-4.jpeg"); 
  background-size: cover;  
+ 
 }
 
 .recipes{
-    background-image: url('../img/Thai-Coconut-Curry-3-1024x896.jpeg');
-    background-size: cover; 
+ background-image: url('../img/Thai-Coconut-Curry-3-1024x896.jpeg');
+ background-size: cover;  
 }
 
 .projects{
     background-image: url('../img/rugged\ woods\ soap.jpeg');
-    background-size: cover; 
+ background-size: cover;  
 }
 
 div.home-post{

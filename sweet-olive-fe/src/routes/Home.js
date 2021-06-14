@@ -16,8 +16,10 @@ function Home(){
     async function getTitle(){
         let res = await SweetOliveApi.getPost()
         // let res = await axios.get('http://sweetolivefarms.com/wp-json/wp/v2/posts?per_page=1')
-        let title = res.data[0].title.rendered
-        let content = res.data[0].content.rendered
+        console.log(res)
+        let post = JSON.parse(res.post)
+        let title = post[0].title.rendered
+        let content = post[0].content.rendered
         setTitle(title);
         setContent(content);
         setIsLoading(false)
@@ -26,9 +28,21 @@ function Home(){
     return(
         <>
         <div className="home-main">
-            <Link to="/plants" className="home-inner plants">Plants</Link>
-            <Link to="/recipes" className="home-inner recipes">Recipes</Link>
-            <Link to="/projects" className="home-inner projects">Projects</Link>
+            <div className="home-inner plants">
+                <div className="wrapper">
+            <Link to="/plants">Plants</Link>
+                </div>
+            </div>
+            <div className="home-inner recipes">
+                <div className="wrapper">
+            <Link to="/recipes">Recipes</Link>
+                </div>
+            </div>
+            <div className="home-inner projects">
+                <div className="wrapper">
+            <Link to="/projects">Projects</Link>
+                </div>
+            </div>
         </div>
         {isLoading ? <Loading />:
          <div className='home-post'>
