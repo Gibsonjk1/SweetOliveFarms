@@ -24,6 +24,7 @@
     height: auto;
     margin-right: auto;
     margin-left: auto;
+    
    
 }
 
@@ -31,32 +32,78 @@
     color: whitesmoke;
     text-decoration: none;
     font-size: 2em;
-    /* font-weight: bold; */
+    font-weight: bold;
+    position: absolute;
+    top: 33%;
+    left: 33%;
+    z-index: 1;
 }
 
-/* .home-inner .wrapper{
-    background-color: black;
-    height: auto;
-    width: 100%;
-    opacity: .9;
-} */
-
-.plants{
- background-image: url("../img/lavender-fields-harvesting-4.jpeg"); 
- background-size: cover;  
+.home-inner a:hover{
+   text-decoration: underline;
+    transition: all .5s ease;
+}
  
+.home-inner:hover > .garden-bg{
+    filter: brightness(50%);
 }
 
-.recipes{
+.home-inner:hover > .recipe-bg{
+    filter: brightness(50%);
+}
+.home-inner:hover > .project-bg{
+    filter: brightness(50%);
+}
+.garden-bg{
+ background-image: url("../img/Garden.jpeg"); 
+ background-size: cover;  
+ height: 100%;
+ width: 100%;
+ -webkit-filter: brightness(100%);
+}
+
+.garden-bg:hover{
+    -webkit-filter: brightness(60%);
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.recipe-bg{
  background-image: url('../img/Thai-Coconut-Curry-3-1024x896.jpeg');
- background-size: cover;  
+ background-size: cover; 
+ height: 100%;
+ width: 100%;
+ -webkit-filter: brightness(100%) 
 }
 
-.projects{
-    background-image: url('../img/rugged\ woods\ soap.jpeg');
- background-size: cover;  
+.recipe-bg:hover{
+    -webkit-filter: brightness(60%);
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
 }
 
+.project-bg{
+    background-image: url('../img/projects.jpeg');
+    background-size: cover; 
+    height: 100%;
+    width: 100%;
+    -webkit-filter: brightness(100%)  
+}
+
+.project-bg:hover{
+    -webkit-filter: brightness(60%);
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+}
 div.home-post{
     display: block;
     width: 80%;

@@ -28,19 +28,22 @@ function Home(){
     return(
         <>
         <div className="home-main">
-            <div className="home-inner plants">
-                <div className="wrapper">
-            <Link to="/plants">Plants</Link>
+            <div className="home-inner">
+            <Link to="/plants">Garden</Link>
+                <div className="garden-bg">
+            
                 </div>
             </div>
-            <div className="home-inner recipes">
-                <div className="wrapper">
+            <div className="home-inner">
             <Link to="/recipes">Recipes</Link>
+                <div className="recipe-bg">
+            
                 </div>
             </div>
             <div className="home-inner projects">
-                <div className="wrapper">
             <Link to="/projects">Projects</Link>
+                <div className="project-bg">
+            
                 </div>
             </div>
         </div>

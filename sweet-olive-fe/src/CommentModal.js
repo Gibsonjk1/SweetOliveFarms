@@ -50,15 +50,21 @@ function CommentModal({post}){
 
             <div className="modal-content">
             <span onClick={close} className="close">&times;</span>
-            <form id="CommentModalForm">
+            <form id="commentModalForm">
+                <div className="form-group">
                 <label htmlFor="name">Name:</label>
-                    <input type="text" name="name" id="name" onChange={handleChange}></input><br />
+                    <input className="form-control" type="text" name="name" id="name" onChange={handleChange}></input><br />
+                </div>
+                <div className="form-group">
                 <label htmlFor="email">Email:</label>
-                    <input type="email" name="email" id="email" onChange={handleChange}></input><br />
+                    <input className="form-control" type="email" name="email" id="email" onChange={handleChange}></input><br />
+                </div>
+                <div className="form-group">
                 <label htmlFor="content">Comment:</label>
-                    <textarea name="content" id="content" rows="10" columns="30" onChange={handleChange}></textarea><br />
+                    <textarea className="form-control" name="content" id="content" rows="10" columns="30" onChange={handleChange}></textarea><br />
                     <input type="hidden" value={post}></input>
-                <button onClick={handleSubmit}>Submit Comment</button>
+                </div>
+                <button className="btn btn-primary" onClick={handleSubmit}>Submit Comment</button>
             </form>
             </div>
 

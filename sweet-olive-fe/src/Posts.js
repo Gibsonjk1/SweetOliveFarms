@@ -27,14 +27,16 @@ function Posts(){
 
     }
   
-    let {post, paramPosts, isLoading} = useContext(AppContext)
+    let {post, paramPosts, isLoading, setIsLoading} = useContext(AppContext)
 
     useEffect(()=>{
       paramPosts(categoryIdMap[handle])
     },[])
 
     let curr = post.current;
-
+    function set(){
+      setIsLoading(true)
+    }
     if (isLoading) return <Loading />;
     
     return(
@@ -46,7 +48,7 @@ function Posts(){
           <section key={uuid()}>
               <Card>
                 <CardBody>
-                    <Link to={`/post/${result.slug}`}>
+                    <Link to={`/post/${result.slug}`} onClick={set}>
                   <CardTitle className="font-weight-bold">
                   <div dangerouslySetInnerHTML={{__html: result.title.rendered}}></div>
                   </CardTitle>

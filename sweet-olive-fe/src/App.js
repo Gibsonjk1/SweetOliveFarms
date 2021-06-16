@@ -14,7 +14,8 @@ import axios from "axios"
 import AppContext from "./Context"
 import Post from "./routes/Post"
 import Projects from './routes/Projects'
-import CreateComment from './CreateComment'
+import Footer from './Footer'
+
 
 library.add(fab)
 
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <div className="App">
+      <div id="page-wrap">
        <AppContext.Provider value={{post, postData, paramPosts, isLoading, setIsLoading, BASE_URL }}>
       <MenuContainer search={search}/>
       <Logo />
@@ -77,15 +79,14 @@ function App() {
           <Route path="/post/:handle">
             <Post />
           </Route>
-          <Route exact path="/create-comment">
-            <CreateComment />
-          </Route>
           <Route path="/search">
             <Search searchData={searchData}/>
           </Route>
           <Redirect to="/" />
         </Switch>
         </AppContext.Provider>
+        </div>
+        <Footer />
        
     </div>
   );

@@ -10,13 +10,13 @@ function Post(){
     const [title, setTitle] = useState("");
     const [content, setContent] = useState('');
     const [post, setPost] = useState()
-    let {isLoading, setIsLoading} = useContext(AppContext);
+    let {isLoading, setIsLoading, BASE_URL} = useContext(AppContext);
     
 
     const {handle} = useParams()
     useEffect(
     async function getTitle(){
-        let res = await axios.get(`http://sweetolivefarms.com/wp-json/wp/v2/posts?slug=${handle}`)
+        let res = await axios.get(`${BASE_URL}/posts?slug=${handle}`)
         let title = res.data[0].title.rendered
         let content = res.data[0].content.rendered
         let postId = res.data[0].id

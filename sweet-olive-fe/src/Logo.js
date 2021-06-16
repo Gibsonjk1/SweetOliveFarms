@@ -1,6 +1,6 @@
 import React from "react"
 import './Logo.css'
-import mainlogo from "./img/SOF-Logo.PNG"
+import mainlogo from "./img/sof-logo2.PNG"
 
 function Logo(){
     return(

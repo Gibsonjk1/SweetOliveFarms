@@ -2,7 +2,6 @@
     width: 80%;
     height: auto;
     text-align: center;
-    border: 1px solid;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -12,13 +11,15 @@
 
 .recipes-inner{
     flex-direction: row;
-    border: 1px solid;
     width: 30%;
     height: 300px;
     margin-top: 5px;
     flex-grow: 1;
     margin-right: 5px;
     margin-left: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
 
 }
 

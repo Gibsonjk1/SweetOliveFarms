@@ -3,6 +3,15 @@
   display: block;
 }
 
+#page-wrap{
+  min-height: 92vh;
+}
+#page-wrap:after {
+  content: "";
+  display: block;
+  
+}
+
 .wp-block-image img {
   border: 1px solid #d3dce5;
   max-width: 80%;
@@ -63,4 +72,12 @@
 
 .wprm-recipe-equipment-list{
   margin-top: 30px;
+}
+
+.size-full{
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

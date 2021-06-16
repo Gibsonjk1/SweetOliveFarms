@@ -2,7 +2,6 @@
     width: 80%;
     height: auto;
     text-align: center;
-    border: 1px solid;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -11,14 +10,15 @@
 
 .projects-inner{
     flex-direction: row;
-    
     justify-content: space-around;
-    border: 1px solid;
     width: 48%;
     height: 300px;
     margin-top: 5px;
     margin-right: auto;
     margin-left: auto;
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
 
 }
 
