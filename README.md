@@ -1,5 +1,5 @@
 # SweetOliveFarms
-- sweetolivefarms.herokuapp.com
+- sweetolivefarms.surge.sh
 
 This website is intended to be a combination of a blog, an informational site, and a site to advertise farm products, events, etc.
 
